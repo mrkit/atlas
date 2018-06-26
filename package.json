@@ -1,0 +1,37 @@
+{
+  "name": "may222018",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack -w --mode development & nodemon server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "css-loader": "^0.28.11",
+    "express": "^4.16.3",
+    "html-webpack-plugin": "^3.2.0",
+    "jsonwebtoken": "^8.2.1",
+    "mini-css-extract-plugin": "^0.4.0",
+    "morgan": "^1.9.0",
+    "node-sass": "^4.9.0",
+    "pg": "^7.4.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-router-dom": "^4.2.2",
+    "sass-loader": "^7.0.1",
+    "sequelize": "^4.37.8",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  }
+}
