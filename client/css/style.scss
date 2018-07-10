@@ -26,6 +26,37 @@ body, h1 {
   
   main {
     padding: 1rem;
+    
+    input {
+      outline: none;
+    }
+    
+    .topics {
+      display: flex;
+      flex-flow: row wrap;
+      
+      li {
+        list-style: none;
+        padding: 1rem;
+        height: 5rem;
+        min-width: 23vw;
+        margin: 2rem;
+        border: 1px solid black;
+        text-align: center;
+        background: #c4e7f2;
+        box-shadow: 3px 3px 3px grey;
+      }
+      
+      li:hover {
+        box-shadow: 1px 1px 1px grey;
+      }
+      
+      li:active {
+        box-shadow: 0 0 0 grey;
+        border: 1px solid white;
+      }
+    }
+    
   }
   
   footer {
