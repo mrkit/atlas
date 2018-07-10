@@ -15,8 +15,11 @@ class Home extends Component  {
 
   handleSubmit = e => {
     e.preventDefault();
-    
-    
+    const topicName = e.target.topicName.value;
+    axios.post('/api/topics',{ name: topicName })
+    .then(res => res.data)
+    .then(topic => this.setState({ topics: [...this.state.topics, topic] }))
+    .catch(err => console.log(`Axios POST /topics error ${err.message}`));
   }
   
   render(){
@@ -26,7 +29,7 @@ class Home extends Component  {
     return (
       <Fragment> 
         <form onSubmit={handleSubmit}>
-          <input type='topic' placeholder='Add topic...' autoFocus/>
+          <input type='text' name='topicName' placeholder='Add topic...' autoFocus/>
           <button>Submit</button>
         </form>
         <ul className='topics'>

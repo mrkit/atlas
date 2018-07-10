@@ -8,4 +8,10 @@ router.get('/', (req, res, next) => {
   .catch(next);
 });
 
+router.post('/', (req, res, next) => {
+	Topics.create({name:req.body.name})
+	.then(topic => res.send(topic))
+	.catch(next);
+})
+
 module.exports = router;
