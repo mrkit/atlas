@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
-const { conn, Users }  = require('./db')
+const { conn }  = require('./db')
+const { Users } = require('./db').models;
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
@@ -24,6 +25,7 @@ app.post('/create',(req,res,next)=>{
 	.then((user)=> res.send(user) )
 	.catch(next)
 })
+
 app.post('/login',(req,res,next)=>{
 	const {username, password} = req.body
 	Users.findOne({username})
