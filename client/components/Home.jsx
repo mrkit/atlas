@@ -1,5 +1,20 @@
-import React, { Fragment } from 'react'
+import React, { Component, Fragment } from 'react';
+import axios from 'axios';
 
-const Home = () => <Fragment> what is Fragment </Fragment>
+class Home extends Component  {
+  state = {
+    topics: []
+  }
+  
+  componentDidMount(){
+    
+  }
+  
+  render(){
+    return (
+      <Fragment> what is Fragment </Fragment>
+    )
+  }
+}
 
 export default Home

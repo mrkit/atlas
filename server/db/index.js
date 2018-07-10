@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const conn = new Sequelize('postgres://localhost/atlas',{logging:false, operatersAlias:false})
+const conn = new Sequelize('postgres://localhost/atlas',{logging:false, operatorsAliases:false})
 const bcrypt = require('bcrypt')
 
 const Users = conn.define('user', {
