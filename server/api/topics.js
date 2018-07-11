@@ -9,7 +9,13 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-	Topics.create({name:req.body.name})
+	Topics.create({ name:req.body.name })
+	.then(topic => res.send(topic))
+	.catch(next);
+})
+
+router.put('/:id', (req, res, next) => {
+	Topics.update({ name: req.body.name },{ where: { id:req.params.id } })
 	.then(topic => res.send(topic))
 	.catch(next);
 })

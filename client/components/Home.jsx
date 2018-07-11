@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class Home extends Component  {
   state = {
@@ -34,7 +35,12 @@ class Home extends Component  {
         </form>
         <ul className='topics'>
         {
-          this.state.topics.map(topic => <li key={topic.id}><h1>{topic.name}</h1></li>)
+          this.state.topics.map(topic => (
+            <li key={topic.id}>
+              <h1><Link to='/{topic.name}'>{topic.name}</Link></h1>
+            </li>)
+          )
+          
         }
         </ul>
       

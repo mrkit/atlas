@@ -9,6 +9,9 @@ const Topics = conn.define('topic', {
     validate: {
       notEmpty: true
     }
+  },
+  content: {
+    type: Sequelize.TEXT
   }
 }, {
   hooks: {
