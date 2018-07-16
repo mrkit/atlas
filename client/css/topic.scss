@@ -25,7 +25,26 @@
     }
     
     article {
+      border-left: 1px solid black;
+      display: grid;
+      grid-template-rows: 1fr 5fr;
       
+      >div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
     }
   }
+}
+
+.editor {
+  font-family: monospace;
+  background: #65676c;
+  color: darkorange;
+  outline: none;
+  font-size: 1rem;
+  resize: none;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
 }

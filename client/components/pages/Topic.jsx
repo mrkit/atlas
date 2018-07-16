@@ -30,6 +30,10 @@ class Topic extends Component {
                   </aside>
                   <article>
                     <h2></h2>
+                    <div>
+                      <div></div>
+                      <textarea className="editor"></textarea>
+                    </div>
                   </article>
 				</section>
 			</div>
