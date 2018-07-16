@@ -6,7 +6,9 @@ const seed = () => {
     Topics.create({ name: 'JavaScript'}),
     Topics.create({ name: 'React'}),
     Topics.create({ name: 'CSS'}),
-    Topics.create({ name: 'Webpack'})
+    Topics.create({ name: 'Webpack'}),
+    Topics.create({ name: 'Authentication'}),
+    Topics.create({ name: 'HTML'})
   ])
 }
 

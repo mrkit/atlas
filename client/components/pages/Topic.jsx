@@ -8,9 +8,9 @@ class Topic extends Component {
 	}
     
     componentDidMount(){
-      const { topic } = this.state;
+      const { topicName } = this.state;
       
-      axios.get(`/api/topics/${topic}`)
+      axios.get(`/api/topics/${topicName}`)
       .then(res => res.data)
       .then(topic => console.log('This is the topic', topic))
       .catch(err => console.log(`Axios GET :topic Error ${err.message}`));
