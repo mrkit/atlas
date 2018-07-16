@@ -37,7 +37,7 @@ class Home extends Component  {
         {
           this.state.topics.map(topic => (
             <li key={topic.id}>
-              <h1><Link to='/{topic.name}'>{topic.name}</Link></h1>
+              <h1><Link to={`/${topic.name}`}>{topic.name}</Link></h1>
             </li>)
           )
           
