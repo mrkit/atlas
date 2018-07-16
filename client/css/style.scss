@@ -13,23 +13,28 @@ body, h1 {
 }
 
 .container { 
-  background: thistle;
+  background: #fafaff;
   height: 100vh;
   weight: 100%;
   display: grid;
   grid-template-rows: 1fr 8fr .4fr;
   
   header {
-    background: #77b1ff;
+    background: linear-gradient(to right, #77b1ff, white);
     padding: 1rem;
+    box-shadow: 0px 1px 9px 3px grey;
   }
   
   main {
     padding: 1rem;
     
-    input {
-      outline: none;
-      margin-left: 4.5rem;
+    form {
+      margin-top: 1.5rem;
+      
+      input {
+        outline: none;
+        margin-left: 2.5rem;
+      }
     }
     
     a {
@@ -38,15 +43,16 @@ body, h1 {
     }
     
     .topics {
-      display: flex;
-      flex-flow: row wrap;
+      display: grid;
+      margin-top: 3rem;
+      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+      width: 90%;
+      grid-gap: 2rem;
       
       li {
         list-style: none;
         padding: 1rem;
         height: 5rem;
-        min-width: 23vw;
-        margin: 2rem;
         border: 1px solid black;
         text-align: center;
         background: #c4e7f2;

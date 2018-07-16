@@ -21,6 +21,8 @@ class Home extends Component  {
     .then(res => res.data)
     .then(topic => this.setState({ topics: [...this.state.topics, topic] }))
     .catch(err => console.log(`Axios POST /topics error ${err.message}`));
+    
+    e.target.topicName.value = ''
   }
   
   render(){
@@ -36,9 +38,11 @@ class Home extends Component  {
         <ul className='topics'>
         {
           this.state.topics.map(topic => (
-            <li key={topic.id}>
-              <h1><Link to={`/${topic.name}`}>{topic.name}</Link></h1>
-            </li>)
+            <Link to={`/${topic.name}`} key={topic.id}>
+              <li>
+                <h1>{topic.name}</h1>
+              </li>
+            </Link>)
           )
           
         }
