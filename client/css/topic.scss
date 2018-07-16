@@ -1,0 +1,31 @@
+.topic { 
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  height: 80vh;
+  
+  h1 {
+    border-bottom: 1px solid black;
+  }
+  
+  section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+    aside {
+      overflow: scroll;
+      
+      ul {
+        margin: 0;
+        padding: 0;
+        
+        li {
+          border-bottom: 1px solid black;
+        }
+      }
+    }
+    
+    article {
+      
+    }
+  }
+}

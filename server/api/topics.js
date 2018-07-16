@@ -20,4 +20,14 @@ router.put('/:id', (req, res, next) => {
 	.catch(next);
 })
 
+router.get('/:topic', (req, res, next) => {
+  const topic = req.params.topic;
+  
+  Topics.findOne({ where: { name: topic }})
+  .then(topic => {
+    topic ? res.send(topic) : res.sendStatus(500);
+  })
+  .catch(next);
+})
+
 module.exports = router;

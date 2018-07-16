@@ -10,10 +10,9 @@ const Main = () => (
 		<Switch>
 			<Route exact path='/' component={Home} />
 			<Route path='/login' component={Login} />
-			<Route path='/topic' component={Topic} />
+			<Route path='/:topic' component={Topic} />
 		</Switch>
 	</main>
-
 )
 
 export default Main

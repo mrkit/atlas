@@ -12,6 +12,11 @@ body, h1 {
   font-weight: 100;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .container { 
   background: #fafaff;
   height: 100vh;
@@ -37,12 +42,7 @@ body, h1 {
       }
     }
     
-    a {
-      text-decoration: none;
-      color: black;
-    }
-    
-    .topics {
+    .topicsContainer {
       display: grid;
       margin-top: 3rem;
       grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
@@ -77,6 +77,9 @@ body, h1 {
       font-weight: 100;
       padding-top: 1vh;
       border-top: 1px solid black;
+      margin: 0;
     }
   }
 }
+
+@import 'topic';

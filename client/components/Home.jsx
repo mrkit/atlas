@@ -35,7 +35,7 @@ class Home extends Component  {
           <input type='text' name='topicName' placeholder='Add topic...' autoFocus/>
           <button>Submit</button>
         </form>
-        <ul className='topics'>
+        <ul className='topicsContainer'>
         {
           this.state.topics.map(topic => (
             <Link to={`/${topic.name}`} key={topic.id}>
